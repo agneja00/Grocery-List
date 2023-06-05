@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery List</title>
+    <link rel="icon"
+        href="https://cdn4.iconfinder.com/data/icons/supermarket-49/512/Grocery-Cart-Shopping-Supermarket-512.png">
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="main.js" defer type="module"></script>
+</head>
+
+<body>
+    <div class="body">
+        <h1 class="welcome-title">Welcome to your personal grocery list 🤗🛍️</h1>
+        <div class="grocery-container">
+            <h2 class="grocery-title">Add product</h2>
+            <div class="add-grocery-container">
+                <div class="add-grocery">
+                    <input type="text" placeholder="Grocery" id="grocery-input" />
+                    <select id="category" class="category-dropdown">
+                        <option value="dairy">Dairy</option>
+                        <option value="vegetables">Vegetables</option>
+                        <option value="fruits">Fruits</option>
+                        <option value="meat">Meat</option>
+                        <option value="breadAndBakery">Bread & Bakery</option>
+                        <option value="Beverages">Beverages</option>
+                    </select>
+                    <button id="add">Add</button>
+                </div>
+                <div class="filter-grocery">
+                    <p class="grocery-container-filter">Filter by:</p>
+                    <select id="filter-by" class="category-dropdown">
+                        <option value="all">All</option>
+                        <option value="dairy">Dairy</option>
+                        <option value="vegetables">Vegetables</option>
+                        <option value="fruits">Fruits</option>
+                        <option value="meat">Meat</option>
+                        <option value="breadAndBakery">Bread & Bakery</option>
+                        <option value="Beverages">Beverages</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="grocery-list-container">
+            <div class="groceries"></div>
+            <button class="remove-all" disabled="true">Remove all</button>
+        </div>
+    </div>
+</body>
+
+</html>
