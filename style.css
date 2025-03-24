@@ -1,184 +1,161 @@
 * {
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
-.body {
+body {
+    background-color: #f4f4f4;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
-    height: 400px;
-    gap: 100px;
+    justify-content: center;
+    height: 100vh;
 }
 
 .welcome-title {
     text-align: center;
-    margin-top: 20px;
-    color: rgb(27, 124, 215)
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 2rem;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.875rem;
 }
 
 .grocery-container {
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to right, #eecda3, #ef629f);
-    padding: 1rem;
-    border-radius: 5px;
-    justify-content: center;
-    height: 300px;
-    align-items: center;
-    width: 400px;
+    background: white;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 20rem;
+    text-align: center;
 }
 
 .grocery-title {
-    margin-bottom: 0.5rem;
-    color: AliceBlue;
+    color: #34495e;
+    font-size: 1.25rem;
+    margin-bottom: 0.625rem;
 }
 
-.add-grocery-container,
-.grocery-list-container {
+.add-grocery {
     display: flex;
-    flex-direction: column;
+    gap: 0.625rem;
+    align-items: center;
+    justify-content: center;
 }
 
 #grocery-input,
 .category-dropdown {
-    border: none;
-    border-radius: 3px;
-    padding: 2px;
-    background-color: MintCream;
-}
-
-#grocery-input:focus {
+    padding: 0.3rem;
+    border-radius: 0.3rem;
+    border: 1px solid #bdc3c7;
     outline: none;
+    width: 6.25rem;
 }
 
 #add {
-    border: none;
-    border-radius: 3px;
-    padding: 3px;
-    background-color: rgb(2, 166, 237);
-    cursor: pointer;
+    background-color: #3498db;
     color: white;
+    border: none;
+    padding: 0.3rem 0.9rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#add:hover {
+    background-color: #2980b9;
 }
 
 .filter-grocery {
-    margin-top: 0.5rem;
+    margin-top: 0.9rem;
     display: flex;
-    gap: 1rem;
+    justify-content: center;
+    gap: 0.625rem;
     align-items: center;
 }
 
-.grocery-container-filter {
-    color: Snow;
-}
-
 .grocery-list-container {
-    background: linear-gradient(to right, #00b4db, #0083b0);
-    padding: 1rem;
-    border-radius: 5px;
-    max-height: 300px;
-    color: white;
-    width: 400px;
+    background: white;
+    padding: 1.25rem;
+    border-radius: 0.625rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 20rem;
 }
 
 .groceries {
-    overflow: hidden;
+    max-height: 12.5rem;
     overflow-y: auto;
-    max-height: 350px;
-}
-
-.groceries::-webkit-scrollbar {
-    width: 12px;
-    background-color: #F5F5F5;
-    border-radius: 10px;
-}
-
-.groceries::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.489);
-    background-color: #F5F5F5;
-    border-radius: 10px;
-}
-
-.groceries::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: rgb(237, 106, 197);
+    margin-bottom: 0.625rem;
 }
 
 .grocery {
     display: flex;
-    height: 2rem;
     justify-content: space-between;
     align-items: center;
-    margin-right: 7px;
+    padding: 0.625rem;
+    background: #ecf0f1;
+    border-radius: 0.3rem;
+    margin-bottom: 0.3rem;
 }
 
-.material-symbols-outlined {
-    padding: 2px !important;
-    font-size: 1rem !important;
-}
-
-.grocery button {
-    background-color: unset;
+.edit,
+.remove {
+    background: none;
     border: none;
     cursor: pointer;
+    font-size: 1rem;
 }
 
 .edit {
-    color: rgba(0, 229, 255, 0.989);
+    color: #27ae60;
 }
 
 .remove {
-    color: red;
+    color: #e74c3c;
 }
 
 .remove-all {
-    border-radius: 3px;
-    background-color: rgb(237, 106, 197);
+    width: 100%;
+    padding: 0.625rem;
+    background-color: #e74c3c;
     color: white;
     border: none;
+    border-radius: 0.3rem;
     cursor: pointer;
-    padding: 3px;
-    margin-top: 30px;
+    transition: 0.3s;
+}
+
+.remove-all:hover {
+    background-color: #c0392b;
 }
 
 .remove-all:disabled {
-    border: 1px solid gray;
-    cursor: default;
     background-color: lightgray;
-    color: black;
+    cursor: not-allowed;
 }
 
-@media only screen and (max-width: 1367px) {
-    .body {
-        margin: 0 30px;
-    }
-
-    .welcome-title {
-        margin-bottom: 20px;
-    }
-
-    .add-grocery {
-        display: flex;
-        gap: 3px;
-    }
-}
-
-@media (max-width: 768px) {
-    .body {
-        flex-direction: column;
-        gap: 0;
-    }
-
-    .welcome-title {
-        margin-left: 10px;
-        margin-right: 10px;
-    }
+@media only screen and (min-width: 768px) {
 
     .grocery-container,
     .grocery-list-container {
-        max-height: 250px;
-        width: 350px;
-        margin-top: 50px;
+        width: 30rem;
+        padding: 2.5rem;
+    }
+
+    #grocery-input,
+    .category-dropdown {
+        width: 50%;
+    }
+
+    #add {
+        padding: 0.35rem 1.2rem;
     }
 }
