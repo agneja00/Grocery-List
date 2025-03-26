@@ -39,9 +39,18 @@ export const createGroceryItem = (grocery) => {
   deleteBtn.addEventListener("click", () => {
     const deletableGroceryIndex = getGroceryIndex(grocery.id);
     const groceries = getDataFromLocalStorage(localStorageKeys.groceries);
-    groceries.splice(deletableGroceryIndex, 1);
-    setDataToLocalStorage(localStorageKeys.groceries, groceries);
-    rerenderGroceryList();
+
+    if (deletableGroceryIndex !== null) {
+      itemContainer.style.transition = "opacity 0.3s ease-out";
+      itemContainer.style.opacity = "0";
+
+      setTimeout(() => {
+        groceries.splice(deletableGroceryIndex, 1);
+        setDataToLocalStorage(localStorageKeys.groceries, groceries);
+        rerenderGroceryList();
+      }, 300);
+    }
+
     onGroceryListChange();
   });
 

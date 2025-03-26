@@ -142,8 +142,20 @@ body {
     cursor: not-allowed;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 500px) {
+    .grocery-container,
+    .grocery-list-container {
+        width: 90%;
+        padding: 1rem;
+    }
 
+    #grocery-input,
+    .category-dropdown {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
     .grocery-container,
     .grocery-list-container {
         width: 30rem;
