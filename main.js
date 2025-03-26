@@ -24,24 +24,57 @@ addGroceryBtn.addEventListener("click", () => {
   const groceryName = groceryInput.value.trim();
 
   if (!groceryName) {
-    alert("Please enter a grocery item!");
+    Swal.fire({
+      icon: "warning",
+      title: "Oops...",
+      text: "Please enter a grocery item!",
+      confirmButtonColor: "#3498db",
+    });
+    return;
+  }
+
+  if (
+    groceries.some(
+      (item) => item.name.toLowerCase() === groceryName.toLowerCase()
+    )
+  ) {
+    Swal.fire({
+      icon: "info",
+      title: "Duplicate Item",
+      text: "This item is already in your grocery list!",
+      confirmButtonColor: "#f39c12",
+    });
     return;
   }
 
   if (Number.isInteger(store.editableGroceryIndex)) {
-    const editableGrocery = groceries[store.editableGroceryIndex];
-    groceries[store.editableGroceryIndex] = {
-      ...editableGrocery,
-      name: groceryName,
-      category: categoryDropdown.value,
-    };
+    groceries[store.editableGroceryIndex].name = groceryName;
+    groceries[store.editableGroceryIndex].category = categoryDropdown.value;
     addGroceryBtn.textContent = "Add";
     store.editableGroceryIndex = undefined;
+
+    Swal.fire({
+      icon: "success",
+      title: "Updated!",
+      text: "Your grocery item has been updated.",
+      confirmButtonColor: "#2ecc71",
+      timer: 1500,
+      showConfirmButton: false,
+    });
   } else {
     groceries.push({
       id: Math.random(),
       category: categoryDropdown.value,
       name: groceryName,
+    });
+
+    Swal.fire({
+      icon: "success",
+      title: "Added!",
+      text: `"${groceryName}" has been added to your grocery list.`,
+      confirmButtonColor: "#2ecc71",
+      timer: 1500,
+      showConfirmButton: false,
     });
   }
 
