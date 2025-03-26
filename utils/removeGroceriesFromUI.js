@@ -1,7 +1,7 @@
 export const removeGroceriesFromUI = () => {
-    const groceriesList = document.querySelectorAll(".grocery");
+  const groceriesList = document.querySelectorAll(".grocery");
 
-    groceriesList.forEach((grocery) => {
-        grocery.remove();
-    });
+  groceriesList.forEach((grocery) => {
+    grocery.remove();
+  });
 };

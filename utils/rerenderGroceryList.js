@@ -3,7 +3,7 @@ import { removeGroceriesFromUI } from "./removeGroceriesFromUI.js";
 import { onGroceryListChange } from "./onGroceryListChange.js";
 
 export const rerenderGroceryList = () => {
-    removeGroceriesFromUI();
-    displayExistingGroceries();
-    onGroceryListChange();
+  removeGroceriesFromUI();
+  displayExistingGroceries();
+  onGroceryListChange();
 };

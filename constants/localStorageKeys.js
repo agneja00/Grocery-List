@@ -1,3 +1,3 @@
 export const localStorageKeys = {
-    groceries: 'groceries',
+  groceries: "groceries",
 };

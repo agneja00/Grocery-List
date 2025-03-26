@@ -2,10 +2,9 @@ import { localStorageKeys } from "../constants/localStorageKeys.js";
 import { getDataFromLocalStorage } from "./storageManagement/getDataFromLocalStorage.js";
 
 export const getGroceryIndex = (groceryId) => {
-    const groceries = getDataFromLocalStorage(localStorageKeys.groceries);
+  const groceries = getDataFromLocalStorage(localStorageKeys.groceries);
 
-    return groceries.findIndex(
-        (groceryFromLocalStorage) =>
-            groceryFromLocalStorage.id === groceryId
-    );
+  return groceries.findIndex(
+    (groceryFromLocalStorage) => groceryFromLocalStorage.id === groceryId
+  );
 };
