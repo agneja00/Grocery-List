@@ -8,7 +8,9 @@ import { displayExistingGroceries } from "./utils/displayExistingGroceries.js";
 import { rerenderGroceryList } from "./utils/rerenderGroceryList.js";
 import { onGroceryListChange } from "./utils/onGroceryListChange.js";
 import { removeGroceriesFromUI } from "./utils/removeGroceriesFromUI.js";
+import { setupDarkModeToggle } from "./utils/setupDarkModeToggle.js";
 
+setupDarkModeToggle();
 setupLocalStorage();
 displayExistingGroceries();
 onGroceryListChange();
