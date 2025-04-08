@@ -9,11 +9,13 @@ import { rerenderGroceryList } from "./utils/rerenderGroceryList.js";
 import { onGroceryListChange } from "./utils/onGroceryListChange.js";
 import { removeGroceriesFromUI } from "./utils/removeGroceriesFromUI.js";
 import { setupDarkModeToggle } from "./utils/setupDarkModeToggle.js";
+import { toggleRemoveAllBtnState } from "./utils/toggleRemoveAllBtnState.js";
 
 setupDarkModeToggle();
 setupLocalStorage();
 displayExistingGroceries();
 onGroceryListChange();
+toggleRemoveAllBtnState();
 
 const addGroceryBtn = document.querySelector("#add");
 const groceryInput = document.querySelector("#grocery-input");
@@ -52,8 +54,9 @@ addGroceryBtn.addEventListener("click", () => {
   if (Number.isInteger(store.editableGroceryIndex)) {
     groceries[store.editableGroceryIndex].name = groceryName;
     groceries[store.editableGroceryIndex].category = categoryDropdown.value;
-    purchased: groceries[store.editableGroceryIndex].purchased || false,
-      (addGroceryBtn.textContent = "Add");
+    groceries[store.editableGroceryIndex].purchased =
+      groceries[store.editableGroceryIndex].purchased || false;
+    addGroceryBtn.textContent = "Add";
     store.editableGroceryIndex = undefined;
 
     Swal.fire({
@@ -91,11 +94,13 @@ addGroceryBtn.addEventListener("click", () => {
 
   setDataToLocalStorage(localStorageKeys.groceries, groceries);
   rerenderGroceryList();
+  toggleRemoveAllBtnState();
 });
 
 filterByDropdown.addEventListener("change", () => {
   if (filterByDropdown.value === "all") {
     rerenderGroceryList();
+    toggleRemoveAllBtnState();
     return;
   }
 
@@ -109,14 +114,11 @@ filterByDropdown.addEventListener("change", () => {
     createGroceryItem(grocery);
   });
 
-  if (groceriesByCategory.length) {
-    removeAllBtn.removeAttribute("disabled");
-  } else {
-    removeAllBtn.setAttribute("disabled", true);
-  }
+  toggleRemoveAllBtnState();
 });
 
 removeAllBtn.addEventListener("click", () => {
   setDataToLocalStorage(localStorageKeys.groceries, []);
   rerenderGroceryList();
+  toggleRemoveAllBtnState();
 });

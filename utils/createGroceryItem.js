@@ -1,3 +1,7 @@
+import { store } from "../storage/store.js";
+import { onGroceryListChange } from "./onGroceryListChange.js";
+import { toggleRemoveAllBtnState } from "./toggleRemoveAllBtnState.js";
+
 export function createGroceryItem(grocery) {
   const groceryList = document.querySelector(".groceries");
 
@@ -60,6 +64,7 @@ export function createGroceryItem(grocery) {
     localStorage.setItem("groceries", JSON.stringify(filtered));
     groceryEl.remove();
     onGroceryListChange();
+    toggleRemoveAllBtnState();
   });
 
   actions.appendChild(editBtn);
