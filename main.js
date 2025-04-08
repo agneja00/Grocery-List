@@ -52,7 +52,8 @@ addGroceryBtn.addEventListener("click", () => {
   if (Number.isInteger(store.editableGroceryIndex)) {
     groceries[store.editableGroceryIndex].name = groceryName;
     groceries[store.editableGroceryIndex].category = categoryDropdown.value;
-    addGroceryBtn.textContent = "Add";
+    purchased: groceries[store.editableGroceryIndex].purchased || false,
+      (addGroceryBtn.textContent = "Add");
     store.editableGroceryIndex = undefined;
 
     Swal.fire({
@@ -68,6 +69,7 @@ addGroceryBtn.addEventListener("click", () => {
       id: Math.random(),
       category: categoryDropdown.value,
       name: groceryName,
+      purchased: false,
     });
 
     Swal.fire({
