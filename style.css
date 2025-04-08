@@ -72,6 +72,10 @@ body {
     text-align: center;
 }
 
+.grocery-container {
+    height: 9rem;
+}
+
 .grocery-title {
     font-size: 1.25rem;
     margin-bottom: 0.625rem;
@@ -256,6 +260,10 @@ body {
     .grocery-list-container {
         width: 30rem;
         padding: 2.5rem;
+    }
+
+    .grocery-container {
+        height: 13rem;
     }
 
     #grocery-input,
