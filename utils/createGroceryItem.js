@@ -1,6 +1,7 @@
 import { store } from "../storage/store.js";
 import { onGroceryListChange } from "./onGroceryListChange.js";
 import { toggleRemoveAllBtnState } from "./toggleRemoveAllBtnState.js";
+import { updateProgressBar } from "./updateProgressBar.js";
 
 export function createGroceryItem(grocery) {
   const groceryList = document.querySelector(".groceries");
@@ -32,6 +33,7 @@ export function createGroceryItem(grocery) {
     }
 
     groceryEl.classList.toggle("purchased", grocery.purchased);
+    updateProgressBar();
   });
 
   const nameSpan = document.createElement("span");
@@ -65,6 +67,7 @@ export function createGroceryItem(grocery) {
     groceryEl.remove();
     onGroceryListChange();
     toggleRemoveAllBtnState();
+    updateProgressBar();
   });
 
   actions.appendChild(editBtn);

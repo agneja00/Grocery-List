@@ -10,12 +10,14 @@ import { onGroceryListChange } from "./utils/onGroceryListChange.js";
 import { removeGroceriesFromUI } from "./utils/removeGroceriesFromUI.js";
 import { setupDarkModeToggle } from "./utils/setupDarkModeToggle.js";
 import { toggleRemoveAllBtnState } from "./utils/toggleRemoveAllBtnState.js";
+import { updateProgressBar } from "./utils/updateProgressBar.js";
 
 setupDarkModeToggle();
 setupLocalStorage();
 displayExistingGroceries();
 onGroceryListChange();
 toggleRemoveAllBtnState();
+updateProgressBar();
 
 const addGroceryBtn = document.querySelector("#add");
 const groceryInput = document.querySelector("#grocery-input");
@@ -95,12 +97,14 @@ addGroceryBtn.addEventListener("click", () => {
   setDataToLocalStorage(localStorageKeys.groceries, groceries);
   rerenderGroceryList();
   toggleRemoveAllBtnState();
+  updateProgressBar();
 });
 
 filterByDropdown.addEventListener("change", () => {
   if (filterByDropdown.value === "all") {
     rerenderGroceryList();
     toggleRemoveAllBtnState();
+    updateProgressBar();
     return;
   }
 
@@ -115,10 +119,12 @@ filterByDropdown.addEventListener("change", () => {
   });
 
   toggleRemoveAllBtnState();
+  updateProgressBar();
 });
 
 removeAllBtn.addEventListener("click", () => {
   setDataToLocalStorage(localStorageKeys.groceries, []);
   rerenderGroceryList();
   toggleRemoveAllBtnState();
+  updateProgressBar();
 });
