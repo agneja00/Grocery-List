@@ -32,3 +32,7 @@ A sleek, responsive grocery list app built with HTML, CSS, and JavaScript — no
 
 - Website - [Agnieska Jackevic] (https://web-portfolio-agneja00.vercel.app/)
 - Linkedin - [Agnieska Jackevic] (https://www.linkedin.com/in/agnieska-jackevic-948830222/)
+
+![Screenshot](./assets/grocery_list_desktop_light.png)
+![Screenshot](./assets/grocery_list_mobile_dark.png)
+
