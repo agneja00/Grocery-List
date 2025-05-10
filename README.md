@@ -27,6 +27,7 @@ A sleek, responsive grocery list app built with HTML, CSS, and JavaScript — no
 - JavaScript – DOM manipulation, logic, and localStorage management.
 - SweetAlert2 – elegant alert messages.
 - LocalStorage API – persistent data storage in the browser.
+- Vercel – deployment platform for fast, global hosting and automatic CI/CD integration.
 
 ## Author
 
