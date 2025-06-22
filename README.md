@@ -21,13 +21,13 @@ A sleek, responsive grocery list app built with HTML, CSS, and JavaScript — no
 
 ### Built with
 
-- HTML5 – structure and semantic layout.
-- CSS – modern responsive styling with flexbox and media queries.
-- CSS Variables – for theme support (dark/light mode).
-- JavaScript – DOM manipulation, logic, and localStorage management.
-- SweetAlert2 – elegant alert messages.
-- LocalStorage API – persistent data storage in the browser.
-- Vercel – deployment platform for fast, global hosting and automatic CI/CD integration.
+- **HTML5** – structure and semantic layout.
+- **CSS** – modern responsive styling with flexbox and media queries.
+- **CSS Variables** – for theme support (dark/light mode).
+- **JavaScript** – DOM manipulation, logic, and localStorage management.
+- **SweetAlert2** – elegant alert messages.
+- **LocalStorage API** – persistent data storage in the browser.
+- **Vercel** – deployment platform for fast, global hosting and automatic CI/CD integration.
 
 ## Author
 
