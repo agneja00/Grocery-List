@@ -1,71 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Grocery List</title>
-    <link rel="icon"
-        href="https://play-lh.googleusercontent.com/7zWoqkWWCzm3RE9B2qWgqMj20QOK4Gs5K8vFAacu0jb57fLpcNcabUzyOB1y5E6eWVs">
+    <link
+      rel="icon"
+      href="https://play-lh.googleusercontent.com/7zWoqkWWCzm3RE9B2qWgqMj20QOK4Gs5K8vFAacu0jb57fLpcNcabUzyOB1y5E6eWVs"
+    />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="main.js" defer type="module"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <button class="dark-mode-btn"></button>
     <div class="wrapper">
-        <h1 class="welcome-title">Welcome to your personal grocery list 🤗🛍️</h1>
-        <main class="main">
-            <div class="grocery-container">
-                <h2 class="grocery-title">Add product</h2>
-                <div class="add-grocery-container">
-                    <div class="add-grocery">
-                        <input type="text" placeholder="Grocery" id="grocery-input" />
-                        <select id="category" class="category-dropdown">
-                            <option value="dairy">Dairy</option>
-                            <option value="vegetables">Vegetables</option>
-                            <option value="fruits">Fruits</option>
-                            <option value="meat">Meat</option>
-                            <option value="breadAndBakery">Bread & Bakery</option>
-                            <option value="Beverages">Beverages</option>
-                        </select>
-                        <button id="add">Add</button>
-                    </div>
-                    <div class="filter-grocery">
-                        <p class="grocery-container-filter">Filter by:</p>
-                        <select id="filter-by" class="category-dropdown">
-                            <option value="all">All</option>
-                            <option value="dairy">Dairy</option>
-                            <option value="vegetables">Vegetables</option>
-                            <option value="fruits">Fruits</option>
-                            <option value="meat">Meat</option>
-                            <option value="breadAndBakery">Bread & Bakery</option>
-                            <option value="Beverages">Beverages</option>
-                        </select>
-                    </div>
-                </div>
+      <h1 class="welcome-title">Welcome to your personal grocery list 🤗🛍️</h1>
+      <main class="main">
+        <div class="grocery-container">
+          <h2 class="grocery-title">Add product</h2>
+          <div class="add-grocery-container">
+            <div class="add-grocery">
+              <input type="text" placeholder="Grocery" id="grocery-input" />
+              <select id="category" class="category-dropdown">
+                <option value="dairy">Dairy</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="fruits">Fruits</option>
+                <option value="meat">Meat</option>
+                <option value="breadAndBakery">Bread & Bakery</option>
+                <option value="Beverages">Beverages</option>
+              </select>
+              <button id="add">Add</button>
             </div>
-            <div class="grocery-list-container">
-                <div class="progress-container">
-                    <p class="progress-label">Progress: <span class="progress-percentage">0%</span></p>
-                    <div class="progress-bar">
-                        <div class="progress-fill"></div>
-                    </div>
-                </div>
-                <div class="groceries"></div>
-                <button class="remove-all" disabled="true">Remove all</button>
+            <div class="filter-grocery">
+              <p class="grocery-container-filter">Filter by:</p>
+              <select id="filter-by" class="category-dropdown">
+                <option value="all">All</option>
+                <option value="dairy">Dairy</option>
+                <option value="vegetables">Vegetables</option>
+                <option value="fruits">Fruits</option>
+                <option value="meat">Meat</option>
+                <option value="breadAndBakery">Bread & Bakery</option>
+                <option value="Beverages">Beverages</option>
+              </select>
             </div>
-        </main>
+          </div>
+        </div>
+        <div class="grocery-list-container">
+          <div class="progress-container">
+            <p class="progress-label">
+              Progress: <span class="progress-percentage">0%</span>
+            </p>
+            <div class="progress-bar">
+              <div class="progress-fill"></div>
+            </div>
+          </div>
+          <div class="groceries"></div>
+          <button class="remove-all" disabled="true">Remove all</button>
+        </div>
+      </main>
     </div>
     <footer>
-        <p class="footer">Copyright &#169; 2025 Agnieska Jackevic. All Rights Reserved.</p>
+      <p class="footer">
+        Copyright &#169; 2025 Agnieska Jackevic. All Rights Reserved.
+      </p>
     </footer>
-</body>
-
+  </body>
 </html>
