@@ -100,6 +100,7 @@ body {
 }
 
 #add {
+  font-weight: 700;
   background-color: var(--button-bg);
   color: white;
   border: none;
@@ -159,6 +160,7 @@ body {
 }
 
 .remove-all {
+  font-weight: 700;
   width: 100%;
   padding: 0.625rem;
   background-color: var(--remove-color);
