@@ -27,7 +27,7 @@
         <h2 class="grocery-title">Add product</h2>
         <div class="add-grocery-container">
           <div class="add-grocery">
-            <input type="text" placeholder="Grocery" id="grocery-input" />
+            <label for="category" class="label">Category:</label>
             <select id="category" class="category-dropdown">
               <option value="dairy">Dairy</option>
               <option value="vegetables">Vegetables</option>
@@ -36,10 +36,11 @@
               <option value="breadAndBakery">Bread & Bakery</option>
               <option value="Beverages">Beverages</option>
             </select>
+            <input type="text" placeholder="Grocery" id="grocery-input" />
             <button id="add">Add</button>
           </div>
           <div class="filter-grocery">
-            <p class="grocery-container-filter">Filter by:</p>
+            <label for="filter-by" class="label">Filter by:</label>
             <select id="filter-by" class="category-dropdown">
               <option value="all">All</option>
               <option value="dairy">Dairy</option>

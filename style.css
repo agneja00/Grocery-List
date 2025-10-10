@@ -88,6 +88,12 @@ body {
   justify-content: center;
 }
 
+.label {
+  font-size: 0.9rem;
+  margin-right: 0.3rem;
+  color: var(--text-color);
+}
+
 #grocery-input,
 .category-dropdown {
   padding: 0.3rem;
@@ -241,7 +247,6 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
-
   .grocery-container,
   .grocery-list-container {
     width: 90%;
@@ -255,7 +260,6 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
-
   .grocery-container,
   .grocery-list-container {
     width: 30rem;
