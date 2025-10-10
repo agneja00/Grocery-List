@@ -7,8 +7,8 @@
   --grocery-bg: #ecf0f1;
   --edit-color: #27ae60;
   --remove-color: #e74c3c;
-  --button-bg: #3498db;
-  --button-hover-bg: #2980b9;
+  --button-bg: #0d6efd;
+  --button-hover-bg: #0b5ed7;
   --remove-hover-bg: #c0392b;
   --disabled-btn-bg: lightgray;
 }
@@ -22,8 +22,8 @@ body.dark {
   --grocery-bg: #3b3b3b;
   --edit-color: #2ecc71;
   --remove-color: #e74c3c;
-  --button-bg: #2980b9;
-  --button-hover-bg: #1c6699;
+  --button-bg: #0a84ff;
+  --button-hover-bg: #0066cc;
   --remove-hover-bg: #96281b;
   --disabled-btn-bg: #555;
 }
@@ -241,6 +241,7 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
+
   .grocery-container,
   .grocery-list-container {
     width: 90%;
@@ -254,6 +255,7 @@ body {
 }
 
 @media only screen and (min-width: 768px) {
+
   .grocery-container,
   .grocery-list-container {
     width: 30rem;
